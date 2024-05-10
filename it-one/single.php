@@ -206,12 +206,7 @@ get_header();
 	</section>
 
 	<?php get_template_part('template-parts/newsletter'); ?>
-	<div class="divider last">
-		<span class="first"></span>
-		<span class="second"></span>
-		<span class="third"></span>
-		<span class="fourth"></span>
-	</div>
+
 </main>
 
 <?php

@@ -1,6 +1,11 @@
 .page-contato {
 	.behind {
 		background-color: var(--biz-blue-v2);
+		&_container {
+			@include media(s) {
+				flex-direction: column-reverse;
+			}
+		}
 		.right-column {
 			.d-title {
 				font-size: 48px;
@@ -19,6 +24,9 @@
 	background-position: center;
 	padding-top: 283px;
 	padding-bottom: 80px;
+	@include media(s) {
+		padding-top: 77px;
+	}
 }
 
 .form {
@@ -29,18 +37,35 @@
 		max-width: 1440px;
 		margin: 0 auto;
 	}
+	@include media(s) {
+		flex-direction: column;
+		gap: 80px;
+	}
 	&_container {
 		max-width: 841px;
 		background-color: var(--biz-blue);
 		padding: 80px;
+		@include media(s) {
+			padding: 32px;
+			max-width: 100%;
+		}
 		.d-title {
 			margin-bottom: 24px;
+			@include media(s) {
+				font-size: 24px;
+			}
 			&.smaller {
 				font-size: 32px;
+				@include media(s) {
+					font-size: 20px;
+				}
 			}
 		}
 		.d-text {
 			margin-bottom: 24px;
+			@include media(s) {
+				font-size: 16px;
+			}
 		}
 		form {
 			.row {
@@ -48,6 +73,11 @@
 				--bs-gutter-x: 0;
 				gap: 16px;
 				margin-bottom: 16px;
+				&.mobile {
+					@include media(s) {
+						flex-direction: column;
+					}
+				}
 				.col {
 					padding: 0;
 					input {
@@ -56,6 +86,9 @@
 						padding: 24px;
 						width: 100%;
 						box-sizing: border-box;
+						@include media(s) {
+							padding: 16px;
+						}
 						&::placeholder {
 							@include t-body;
 							font-size: 18px;
@@ -64,6 +97,12 @@
 							line-height: normal;
 							text-transform: uppercase;
 							color: var(--first-white);
+							@include media(s) {
+								font-size: 16px;
+							}
+						}
+						@include media(s) {
+							font-size: 16px;
 						}
 					}
 					textarea {
@@ -112,6 +151,9 @@
 				background-color: transparent;
 				padding: 0;
 				border: none;
+				@include media(s) {
+					width: 100%;
+				}
 				p {
 					background-color: var(--first-white);
 					font-size: 18px;
@@ -122,15 +164,30 @@
 					color: var(--one-blue);
 					padding-right: 211px;
 					margin-right: 8px;
+					@include media(s) {
+						padding: 16px;
+						width: 100%;
+					}
 				}
+
 				img {
 					background-color: var(--first-white);
+					@include media(s) {
+						padding: 16px;
+					}
 				}
 			}
 		}
 	}
 	&_client {
 		max-width: 439px;
+		@include media(s) {
+			padding: 0 32px;
+			.button--container {
+				width: 100%;
+				display: block;
+			}
+		}
 		.d-text {
 			font-size: 32px;
 			font-style: normal;
@@ -145,6 +202,9 @@
 	padding: 80px 0px;
 	&_container {
 		@include container;
+		@include media(s) {
+			padding: 0 32px;
+		}
 		.d-title {
 			margin-bottom: 24px;
 		}
@@ -153,11 +213,17 @@
 		margin-top: 103px;
 		display: flex;
 		gap: 40px;
-
+		@include media(s) {
+			margin-top: 40px;
+			flex-direction: column;
+		}
 		.card {
 			background-color: transparent;
 			max-width: 286px;
 			width: 100%;
+			@include media(s) {
+				flex-shrink: 0;
+			}
 			&.matriz {
 				border: 1px solid var(--first-white);
 				margin-bottom: 24px;
@@ -179,6 +245,9 @@
 	&_demais {
 		.d-flex {
 			gap: 16px;
+			@include media(s) {
+				overflow: auto;
+			}
 		}
 	}
 }

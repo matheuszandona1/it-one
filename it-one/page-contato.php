@@ -27,7 +27,7 @@ get_header();
                             <input type="text" class="form-control" placeholder="Sobrenome">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mobile">
                         <div class="col">
                             <input type="text" class="form-control" placeholder="EMAIL CORPORATIVO">
                         </div>
@@ -153,10 +153,8 @@ get_header();
             </div>
         </div>
     </section>
-    <div class="divider last">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-        <span class="fourth"></span>
-    </div>
+
 </main>
+
+<?php
+get_footer();

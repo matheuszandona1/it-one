@@ -243,3 +243,143 @@
 		}
 	}
 }
+
+.footer {
+	background-color: var(--biz-blue);
+	&_container {
+		@include container;
+		padding: 80px 0;
+		@include media(s) {
+			flex-direction: column;
+			padding: 80px 32px;
+		}
+	}
+	&-logo {
+		@include media(s) {
+			max-width: 100px;
+			width: 100%;
+			flex-shrink: 0;
+			svg {
+				max-width: 100%;
+			}
+		}
+	}
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		@include media(s) {
+			gap: 24px;
+		}
+		&-r {
+			display: flex;
+			justify-content: space-between;
+			max-width: 820px;
+			width: 100%;
+			border-bottom: 3px solid var(--one-blue);
+			@include media(s) {
+				flex-direction: column;
+				border: none;
+				gap: 20px;
+				justify-content: start;
+				align-items: end;
+			}
+		}
+	}
+	&_socials {
+		display: flex;
+		gap: 24px;
+		a {
+			display: inline-block;
+			height: 32px;
+		}
+	}
+	&_content {
+		display: flex;
+		gap: 24px;
+		padding-top: 80px;
+		@include media(s) {
+			flex-direction: column;
+			padding-top: 40px;
+		}
+	}
+	&_column {
+		max-width: 411px;
+		color: var(--first-white);
+		width: 100%;
+		li a,
+		a {
+			color: var(--first-white);
+			text-decoration: none;
+			@include t-body;
+			display: block;
+			&:visited {
+				color: var(--first-white);
+			}
+		}
+	}
+
+	&_title {
+		@include t-body;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 154%;
+		font-size: 21px;
+		margin-bottom: 32px;
+		@include media(s) {
+			font-size: 16px;
+		}
+	}
+	&_menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			margin-bottom: 32px;
+			@include media(s) {
+				margin-bottom: 16px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 300;
+			line-height: 150%;
+			text-transform: uppercase;
+			@include media(s) {
+				font-size: 14px !important;
+			}
+		}
+
+		&.lower {
+			li {
+				margin-bottom: 16px;
+			}
+
+			a {
+				text-transform: none;
+			}
+		}
+	}
+	&_link {
+		@include t-body;
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 154%;
+		color: var(--first-white);
+		display: block;
+		margin-bottom: 32px !important;
+		@include media(s) {
+			font-size: 12px;
+			margin-bottom: 16px !important;
+		}
+		&:last-child {
+			text-decoration: underline;
+
+			margin-bottom: 0 !important;
+		}
+	}
+}

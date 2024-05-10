@@ -149,12 +149,7 @@ get_header(); // Inclui o cabeçalho do site
 
         </div>
     </section>
-    <div class="divider last">
-        <span class="first"></span>
-        <span class="second"></span>
-        <span class="third"></span>
-        <span class="fourth"></span>
-    </div>
+
 
 </main>
 < <?php
