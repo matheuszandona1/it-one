@@ -197,4 +197,3 @@ lists.forEach((list)=>{
     list.children[i].classList.add("divider-case");
 });
 
-//# sourceMappingURL=index.js.map
