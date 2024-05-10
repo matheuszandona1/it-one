@@ -13,8 +13,8 @@
 	font-weight: 100;
 	line-height: 118%;
 	@include media(s) {
-		font-size: 40px;
-		line-height: 48px;
+		font-size: 44px;
+		line-height: 88%;
 	}
 }
 @mixin h2-headline {
@@ -44,7 +44,8 @@
 	font-weight: 100;
 	line-height: 118%;
 	@include media(s) {
-		font-size: 16px;
+		font-size: 30px;
+		line-height: 125%;
 	}
 }
 @mixin h5-headline {
@@ -83,6 +84,11 @@
 	font-size: 24px;
 	font-weight: 100;
 	line-height: 118%;
+	@include media(s) {
+		font-size: 20px;
+		line-height: 150%;
+		font-weight: 200;
+	}
 }
 @mixin s-body {
 	font-family: "Onest", sans-serif;

@@ -1,10 +1,77 @@
 .page--home {
 	background-color: var(--biz-blue);
+
+	.divider {
+		@include media(s) {
+			width: calc(100% - 32px);
+			margin-left: auto;
+			&.last {
+				width: 100%;
+			}
+		}
+	}
+	.pilares {
+		padding-bottom: 40px;
+		.way_title {
+			padding: 40px 24px;
+			background: url("../assets/bg-way.jpg?as=webp");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position-y: bottom;
+			background-position-x: left;
+			width: 100%;
+			text-align: right;
+			position: relative;
+		}
+		&_content {
+			padding: 40px 32px;
+			padding-right: 0;
+			background-color: var(--biz-blue);
+		}
+
+		&_container {
+			overflow: auto;
+			padding-bottom: 40px;
+			padding-right: 32px;
+			&::-webkit-scrollbar {
+				background-color: var(--first-white);
+				height: 4px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: var(--one-blue);
+			}
+			.way_card {
+				width: 100%;
+				flex-shrink: 0;
+				max-width: 296px;
+				&-top {
+					gap: 24px;
+					margin-bottom: 16px;
+					.d-title {
+						color: var(--first-white);
+						font-size: 24px;
+						font-style: normal;
+						font-weight: 100;
+						margin: 0;
+						line-height: 130%;
+					}
+				}
+			}
+		}
+	}
 }
 
 .hero {
-	background: url("../assets/hero.png");
+	background: url("../assets/hero.png?as=webp");
 	height: 871px;
+	@include media(s) {
+		background: url("../assets/hero-mobile.jpeg?as=webp");
+		background-size: 600px;
+		background-repeat: no-repeat;
+		background-position: center 60px;
+		height: 100%;
+	}
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -12,6 +79,13 @@
 		height: 100%;
 		@include container;
 		gap: 132px;
+		@include media(s) {
+			flex-direction: column;
+			gap: 32px;
+			justify-content: start;
+			padding: 163px 32px 64px;
+			align-items: start;
+		}
 	}
 	&__title {
 		@include h1-headline;
@@ -25,6 +99,9 @@
 	&__content {
 		padding-bottom: 98px;
 		max-width: 411px;
+		@include media(s) {
+			padding-bottom: 0;
+		}
 		.d-text {
 			max-width: 393px;
 			margin-bottom: 32px;
@@ -33,11 +110,22 @@
 }
 
 .refs {
+	@include media(s) {
+		padding: 0;
+	}
 	padding: 120px 0px;
 	&__container {
 		display: flex;
 		@include container;
 		gap: 103px;
+		@include media(s) {
+			flex-direction: column;
+			padding: 0 32px;
+			gap: 32px;
+			.d-text {
+				font-size: 16px;
+			}
+		}
 	}
 	&__content {
 		max-width: 519px;
@@ -47,21 +135,33 @@
 	}
 	&__data {
 		width: 100%;
+		@include media(s) {
+			max-width: 100%;
+		}
 		.position {
 			display: flex;
 			justify-content: end;
+			@include media(s) {
+				flex-direction: row;
+			}
 		}
 		&--card {
 			width: 358px;
 			padding: 24px 40px;
 			color: var(--biz-blue);
 			text-align: center;
+			@include media(s) {
+				width: 100%;
+			}
 			&.first {
 				background-color: var(--light-lilac);
 			}
 			&.second {
 				background-color: var(--light-gray);
 				width: 299px;
+				@include media(s) {
+					width: 100%;
+				}
 			}
 			&.third {
 				background-color: var(--light-blue);
@@ -70,26 +170,57 @@
 			&-number {
 				@include h2-headline;
 				font-size: 80px;
+				@include media(s) {
+					font-size: 77px;
+					text-align: center;
+				}
 			}
 			&-text {
 				@include f-subtitle;
 				font-size: 32px;
+				@include media(s) {
+					font-size: 24px;
+				}
 			}
 		}
 	}
 }
 .solutions {
 	padding: 120px 0px;
+	@include media(s) {
+		padding-top: 40px;
+	}
+
 	&__container {
 		@include container;
 		display: flex;
 		gap: 24px;
+		@include media(s) {
+			padding: 0 32px;
+			padding-right: 0;
+		}
+		&.desktop-only {
+			display: flex;
+			@media (max-width: 1000px) {
+				display: none;
+			}
+		}
 	}
 	&__title {
 		@include f-subtitle;
 		font-size: 32px;
 		color: #a4e4ff;
 		margin-bottom: 40px;
+		@include media(s) {
+			margin-bottom: 40px;
+			padding-right: 32px;
+		}
+	}
+	.d-title {
+		@include media(s) {
+			margin-bottom: 24px;
+			padding-right: 32px;
+		}
 	}
 	&__boxes {
 		max-width: 411px;
@@ -97,6 +228,21 @@
 		display: flex;
 		gap: 24px;
 		flex-direction: column;
+		@include media(s) {
+			flex-direction: row;
+			overflow: auto;
+			height: 100%;
+			padding-bottom: 32px;
+
+			&::-webkit-scrollbar {
+				background-color: var(--first-white);
+				height: 4px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background-color: var(--one-blue);
+			}
+		}
 		&.first {
 			display: flex;
 			flex-direction: column;
@@ -108,6 +254,15 @@
 		border: 1px solid var(--first-white);
 
 		height: 368px;
+		@include media(s) {
+			height: 287px;
+			width: 296px;
+			flex-shrink: 0;
+			img {
+				width: 100%;
+				height: 120px;
+			}
+		}
 		display: flex;
 		flex-direction: column;
 		&:hover {
@@ -122,6 +277,9 @@
 	&__card {
 		padding: 40px;
 		position: relative;
+		@include media(s) {
+			padding: 24px;
+		}
 		.button-plus {
 			background-color: var(--one-blue);
 			@include h4-headline;
@@ -139,6 +297,10 @@
 			@include f-subtitle;
 			font-size: 32px;
 			margin-bottom: 24px;
+			@include media(s) {
+				font-size: 24px;
+				line-height: 130%;
+			}
 			&:hover {
 				color: var(--first-white);
 			}
@@ -147,40 +309,61 @@
 }
 
 .way {
-	background: url("../assets/bg-way.jpg");
+	background: url("../assets/bg-way.jpg?as=webp");
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	@include media(s) {
+		background-size: contain;
+	}
 	&_container {
 		position: relative;
 		height: 1001px;
 		&::after,
 		&::before {
 			content: "";
-			width: 244px;
+			width: 17%;
 			position: absolute;
 			left: 0;
 			right: 0;
 			margin: 0 auto;
 			height: 276px;
 			background-color: var(--light-blue);
+			@media (max-width: 1440px) {
+				width: 17%;
+			}
 		}
 		&::before {
 			height: 301px;
 			right: -2px;
 			background-color: var(--biz-blue);
+			@include media(s) {
+				display: none;
+			}
 		}
 		&::after {
 			bottom: 0;
 			left: -2px;
+			@include media(s) {
+				display: none;
+			}
 		}
-		@media (min-width: 1500px) {
+		@media (min-width: 1512px) {
 			max-width: 1440px;
 			margin: 0 auto;
+		}
+
+		@include media(s) {
+			display: flex;
+			overflow: auto;
 		}
 	}
 	&_title {
 		padding: 80px;
+
+		@include media(s) {
+			position: absolute;
+		}
 	}
 	&_content {
 		background: var(--light-blue);
@@ -189,6 +372,9 @@
 		position: absolute;
 		bottom: 0;
 		color: var(--first-black);
+		@include media(s) {
+			position: unset;
+		}
 
 		.d-title {
 			color: var(--first-black);
@@ -233,6 +419,9 @@
 .story {
 	background-color: var(--light-blue);
 	padding: 120px 0px;
+	@include media(s) {
+		padding: 40px 0;
+	}
 	&_container {
 		@include container;
 	}
@@ -244,6 +433,10 @@
 	.swiper-container {
 		width: 100%;
 		height: 680px;
+		@include media(s) {
+			height: 100%;
+			width: calc(100% - 32px);
+		}
 		.swiper-button-next,
 		.swiper-button-prev {
 			background-color: var(--first-white);
@@ -251,6 +444,11 @@
 
 			width: 72px;
 			height: 72px;
+			@include media(s) {
+				background-size: 7px 20px;
+				width: 42px;
+				height: 42px;
+			}
 		}
 		.swiper-button-next {
 			right: -50%;
@@ -258,16 +456,29 @@
 			margin: 0 auto;
 			background-image: url("../assets/navigate_before.svg");
 			transform: rotate(180deg);
+			@include media(s) {
+				right: 0;
+				left: unset;
+				top: 40%;
+			}
 		}
 		.swiper-button-prev {
 			left: -50%;
 			right: 0;
 			margin: 0 auto;
 			background-image: url("../assets/navigate_before.svg");
+			@include media(s) {
+				left: 0;
+				right: unset;
+				top: 40%;
+			}
 		}
 		.swiper-wrapper {
 			align-items: center;
 			height: 680px !important;
+			@include media(s) {
+				height: 180px !important;
+			}
 		}
 	}
 
@@ -276,14 +487,27 @@
 		width: 302px;
 		opacity: 0.5;
 		height: 422px;
+		.slide-info {
+			z-index: 2;
+		}
+		.img-logo {
+			display: none;
+		}
 		&-active {
+			.img-logo {
+				display: block;
+			}
 			width: 628px;
 			height: 680px;
 			box-shadow: 0px 0px 142.2px 1px #a4e9ff;
 			opacity: 1;
+			@include media(s) {
+				height: 180px;
+				width: 180px;
+			}
 		}
 		.img-background {
-			background: url("../assets/bg-way.jpg");
+			background: url("../assets/bg-way.jpg?as=webp");
 			width: 100%;
 			height: 100%;
 			padding: 40px;
@@ -291,6 +515,9 @@
 			display: flex;
 			justify-content: center;
 			align-items: end;
+			@include media(s) {
+				padding: 16px;
+			}
 			.img-logo {
 				background: var(--first-white);
 				padding: 24px;
@@ -320,6 +547,10 @@
 		display: flex;
 		gap: 132px;
 		padding: 120px 0px;
+		@include media(s) {
+			flex-direction: column;
+			padding: 40px 32px;
+		}
 		.right-column {
 			max-width: 411px;
 			.d-title {
@@ -328,6 +559,9 @@
 				line-height: 96%; /* 76.8px */
 				letter-spacing: -3.6px;
 				color: var(--biz-blue);
+				@include media(s) {
+					font-size: 40px;
+				}
 			}
 			.d-text {
 				margin: 40px 0;
@@ -335,6 +569,9 @@
 				font-size: 24px;
 				font-weight: 200;
 				line-height: 150%;
+				@include media(s) {
+					font-size: 20px;
+				}
 			}
 		}
 	}
@@ -343,4 +580,65 @@
 .news {
 	padding: 120px 0;
 	background-color: var(--first-white);
+	@include media(s) {
+		padding-top: 32px;
+		padding: 40px 0;
+		.d-title {
+			margin-bottom: 40px;
+		}
+		.button--container {
+			padding: 0 32px;
+			.button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.cta {
+	background-image: url("../assets/bg-cta.jpeg?as=webp");
+	padding: 120px 0px;
+	background-size: cover;
+	background-position-x: right;
+	background-repeat: no-repeat;
+	@include media(s) {
+		padding: 40px 0;
+	}
+	&_container {
+		@include container;
+		@include media(s) {
+			padding: 0 32px;
+		}
+	}
+	&_content {
+		background-color: var(--first-white);
+		max-width: 631px;
+		padding: 64px;
+		@include media(s) {
+			padding: 32px;
+			.button--container {
+				.button {
+					p {
+						font-weight: 500;
+					}
+				}
+			}
+		}
+		.d-title {
+			font-size: 80px;
+			font-style: normal;
+			font-weight: 100;
+			line-height: 96%; /* 76.8px */
+			letter-spacing: -3.6px;
+			color: var(--biz-blue);
+			margin-bottom: 40px;
+			@include media(s) {
+				font-size: 40px;
+				font-style: normal;
+				font-weight: 100;
+				line-height: 120%; /* 48px */
+				letter-spacing: -1.8px;
+			}
+		}
+	}
 }

@@ -1,0 +1,184 @@
+.page-contato {
+	.behind {
+		background-color: var(--biz-blue-v2);
+		.right-column {
+			.d-title {
+				font-size: 48px;
+				font-style: normal;
+				font-weight: 100;
+				line-height: 56px;
+			}
+		}
+	}
+}
+
+.bg-contato {
+	background: linear-gradient(180deg, rgba(17, 30, 42, 0.6) 0%, #111e2a 100%), url("../assets/degrade-azul.png"), url("../assets/bg-contato.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding-top: 283px;
+	padding-bottom: 80px;
+}
+
+.form {
+	gap: 160px;
+	display: flex;
+	align-items: end;
+	@media (min-width: 1512px) {
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+	&_container {
+		max-width: 841px;
+		background-color: var(--biz-blue);
+		padding: 80px;
+		.d-title {
+			margin-bottom: 24px;
+			&.smaller {
+				font-size: 32px;
+			}
+		}
+		.d-text {
+			margin-bottom: 24px;
+		}
+		form {
+			.row {
+				padding: 0;
+				--bs-gutter-x: 0;
+				gap: 16px;
+				margin-bottom: 16px;
+				.col {
+					padding: 0;
+					input {
+						all: unset;
+						border: 1px solid var(--first-white);
+						padding: 24px;
+						width: 100%;
+						box-sizing: border-box;
+						&::placeholder {
+							@include t-body;
+							font-size: 18px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: normal;
+							text-transform: uppercase;
+							color: var(--first-white);
+						}
+					}
+					textarea {
+						all: unset;
+						border: 1px solid var(--first-white);
+						padding: 24px;
+						width: 100%;
+						box-sizing: border-box;
+						background-color: transparent;
+						&::placeholder {
+							@include t-body;
+							font-size: 18px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: normal;
+							text-transform: uppercase;
+							color: var(--first-white);
+						}
+					}
+					select {
+						all: unset;
+						border: 1px solid var(--first-white);
+						padding: 24px;
+						width: 100%;
+						box-sizing: border-box;
+						@include t-body;
+						font-size: 18px;
+						font-style: normal;
+						font-weight: 500;
+						line-height: normal;
+						text-transform: uppercase;
+						color: var(--first-white);
+						option:checked {
+							@include t-body;
+							font-size: 18px;
+							font-style: normal;
+							font-weight: 500;
+							line-height: normal;
+							text-transform: uppercase;
+							color: var(--first-white);
+						}
+					}
+				}
+			}
+			.button {
+				background-color: transparent;
+				padding: 0;
+				border: none;
+				p {
+					background-color: var(--first-white);
+					font-size: 18px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					text-transform: uppercase;
+					color: var(--one-blue);
+					padding-right: 211px;
+					margin-right: 8px;
+				}
+				img {
+					background-color: var(--first-white);
+				}
+			}
+		}
+	}
+	&_client {
+		max-width: 439px;
+		.d-text {
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 130%;
+			margin: 24px 0;
+		}
+	}
+}
+
+.presencial {
+	padding: 80px 0px;
+	&_container {
+		@include container;
+		.d-title {
+			margin-bottom: 24px;
+		}
+	}
+	&_content {
+		margin-top: 103px;
+		display: flex;
+		gap: 40px;
+
+		.card {
+			background-color: transparent;
+			max-width: 286px;
+			width: 100%;
+			&.matriz {
+				border: 1px solid var(--first-white);
+				margin-bottom: 24px;
+				padding: 24px;
+				max-width: 346px;
+				width: 100%;
+			}
+			.d-title {
+				font-size: 32px;
+			}
+			.d-text {
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 300;
+				line-height: 150%;
+			}
+		}
+	}
+	&_demais {
+		.d-flex {
+			gap: 16px;
+		}
+	}
+}

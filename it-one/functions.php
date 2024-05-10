@@ -194,3 +194,227 @@ add_action('init', 'register_my_menus');
 
 
 require_once get_template_directory() . '/walker-class.php';
+
+
+// Função para adicionar o meta box
+function add_custom_meta_box()
+{
+	add_meta_box(
+		'featured_post', // ID do meta box
+		'Destacar Post', // Título do meta box
+		'custom_meta_box_markup', // Callback que renderiza o conteúdo do meta box
+		'post', // Tipo de post onde será adicionado
+		'side', // Contexto (lado)
+		'high' // Prioridade
+	);
+}
+
+// Hook para adicionar o meta box
+add_action('add_meta_boxes', 'add_custom_meta_box');
+
+// Callback para renderizar o conteúdo do meta box
+function custom_meta_box_markup($post)
+{
+	wp_nonce_field('featured_post_nonce_action', 'featured_post_nonce');
+
+	$is_featured = get_post_meta($post->ID, 'featured_post', true);
+	?>
+	<input type="checkbox" name="featured_post" <?php checked($is_featured, 'yes'); ?> /> Marcar como Destacado
+	<?php
+}
+
+// Função para salvar os dados do meta box
+function save_custom_meta_box($post_id, $post, $update)
+{
+	// Verificar se o nonce está definido e é válido
+	if (!isset($_POST['featured_post_nonce']) || !wp_verify_nonce($_POST['featured_post_nonce'], 'featured_post_nonce_action')) {
+		return $post_id;
+	}
+
+	// Verificar se o usuário atual tem permissão para editar o post
+	if (!current_user_can('edit_post', $post_id)) {
+		return $post_id;
+	}
+
+	// Verificar se não é uma revisão automática
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+		return $post_id;
+
+
+
+	}
+
+	if (isset($_POST['post_categories'])) {
+		$categories = $_POST['post_categories']; // 'post_categories' deve ser um array de IDs de termos
+		wp_set_post_terms($post_id, $categories, 'category');
+	}
+
+	// Verificar o valor enviado e atualizar o meta
+	$is_featured = (isset($_POST['featured_post']) && $_POST['featured_post'] === 'on') ? 'yes' : 'no';
+	update_post_meta($post_id, 'featured_post', $is_featured);
+}
+
+// Hook para salvar os dados quando o post é salvo
+add_action('save_post', 'save_custom_meta_box', 10, 3);
+
+
+
+
+function register_featured_taxonomy()
+{
+	$labels = array(
+		'name' => _x('Destacados', 'Taxonomy General Name', 'textdomain'),
+		'singular_name' => _x('Destacado', 'Taxonomy Singular Name', 'textdomain'),
+		'menu_name' => __('Destacados', 'textdomain'),
+		'all_items' => __('Todos os Destacados', 'textdomain'),
+		'parent_item' => __('Item Pai', 'textdomain'),
+		'parent_item_colon' => __('Item Pai:', 'textdomain'),
+		'new_item_name' => __('Novo Nome de Destacado', 'textdomain'),
+		'add_new_item' => __('Adicionar Novo Destacado', 'textdomain'),
+		'edit_item' => __('Editar Destacado', 'textdomain'),
+		'update_item' => __('Atualizar Destacado', 'textdomain'),
+		'view_item' => __('Ver Destacado', 'textdomain'),
+		'separate_items_with_commas' => __('Separe os destacados com vírgulas', 'textdomain'),
+		'add_or_remove_items' => __('Adicionar ou remover destacados', 'textdomain'),
+		'choose_from_most_used' => __('Escolher entre os mais usados', 'textdomain'),
+		'popular_items' => __('Destacados Populares', 'textdomain'),
+		'search_items' => __('Procurar Destacados', 'textdomain'),
+		'not_found' => __('Não Encontrado', 'textdomain'),
+		'no_terms' => __('Sem Destacados', 'textdomain'),
+		'items_list' => __('Lista de Destacados', 'textdomain'),
+		'items_list_navigation' => __('Navegação da Lista de Destacados', 'textdomain'),
+	);
+	$args = array(
+		'labels' => $labels,
+		'hierarchical' => false, // Define se é uma taxonomia hierárquica como categorias ou não hierárquica como tags.
+		'public' => true,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'show_in_nav_menus' => true,
+		'show_tagcloud' => true,
+		'show_in_rest' => true, // Habilita suporte ao Gutenberg.
+	);
+	register_taxonomy('destacado', array('post'), $args);
+}
+add_action('init', 'register_featured_taxonomy');
+
+
+
+
+function calculate_reading_time($post_id)
+{
+	$post_content = get_post_field('post_content', $post_id);
+	$word_count = str_word_count(strip_tags($post_content));
+	$reading_time = ceil($word_count / 200); // 200 palavras por minuto
+	return $reading_time;
+}
+
+
+if (!function_exists('setup_theme')):
+	function setup_theme()
+	{
+		add_theme_support('post-thumbnails'); // Habilita suporte para imagens destacadas
+	}
+endif;
+add_action('after_setup_theme', 'setup_theme');
+
+
+
+// Função para definir o comprimento do excerpt
+function custom_excerpt_length($length)
+{
+	return 20; // Altere o número de acordo com o comprimento desejado
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+
+// Função para remover o "[...]" do final do excerpt
+function custom_excerpt_more($more)
+{
+	return ''; // Retorna uma string vazia para remover o texto de truncamento
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+
+
+
+// Adiciona classes aos elementos de texto gerados pelo the_content
+function add_classes_to_content_elements($content)
+{
+	// Adiciona classes aos parágrafos
+	$content = str_replace('<p>', '<p class="custom-paragraph">', $content);
+
+	// Adiciona classes aos títulos (h1, h2, h3, h4, h5, h6)
+	$content = preg_replace('/<h([1-6])>/', '<h$1 class="custom-heading">', $content);
+
+	// Adiciona classes às listas (ul, ol, li)
+	$content = str_replace('<ul>', '<ul class="custom-list">', $content);
+	$content = str_replace('<ol>', '<ol class="custom-list">', $content);
+	$content = str_replace('<li>', '<li class="custom-list-item">', $content);
+
+	// Adiciona classes às citações (blockquote)
+	$content = str_replace('<blockquote>', '<blockquote class="custom-blockquote">', $content);
+
+	// Adiciona classes aos links (a)
+	$content = str_replace('<a ', '<a class="custom-link" ', $content);
+
+	return $content;
+}
+add_filter('the_content', 'add_classes_to_content_elements');
+
+
+function registrar_cases_post_type()
+{
+	$args = array(
+		'public' => true,
+		'label' => 'Cases',
+		'supports' => array('title', 'editor', 'thumbnail'), // Adicione quaisquer outros suportes necessários
+	);
+	register_post_type('cases', $args);
+}
+add_action('init', 'registrar_cases_post_type');
+
+
+
+function registrar_taxonomia_categorias_do_case()
+{
+	$labels = array(
+		'name' => 'Categorias do Case',
+		'singular_name' => 'Categoria do Case',
+		'menu_name' => 'Categorias',
+		'all_items' => 'Todas as Categorias',
+		'edit_item' => 'Editar Categoria',
+		'view_item' => 'Ver Categoria',
+		'update_item' => 'Atualizar Categoria',
+		'add_new_item' => 'Adicionar Nova Categoria',
+		'new_item_name' => 'Novo Nome da Categoria',
+		'search_items' => 'Buscar Categorias',
+		'not_found' => 'Nenhuma categoria encontrada',
+		'not_found_in_trash' => 'Nenhuma categoria encontrada na lixeira',
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'hierarchical' => true,
+		'show_admin_column' => true,
+		'rewrite' => array('slug' => 'categoria_do_case'),
+	);
+
+	register_taxonomy('categoria_do_case', 'cases', $args);
+}
+add_action('init', 'registrar_taxonomia_categorias_do_case');
+
+
+
+function redirect_cases_single_template($template)
+{
+	// Verifica se a postagem atual é do tipo "cases"
+	if (is_singular('cases')) {
+		// Define o caminho para o template single-cases.php
+		$template = locate_template(array('single-cases.php'));
+	}
+
+	// Retorna o template escolhido
+	return $template;
+}
+add_filter('single_template', 'redirect_cases_single_template');

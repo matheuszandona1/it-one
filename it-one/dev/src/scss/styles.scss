@@ -3,10 +3,39 @@
 @import "./general/global";
 
 // functions de responsividade e grid
+
 @import "./structure/functions";
 @import "./structure/mixins";
 @import "./structure/variables";
 
+.d-title {
+	@include media(s) {
+		font-size: 32px;
+	}
+}
+
 @import "./site/componentes";
 @import "./site/page";
 @import "./site/solutions-default-page";
+@import "./site/solutions-page";
+
+@import "./site/page-carreiras";
+@import "./site/page-sobre";
+@import "./site/page-blog";
+@import "./site/page-contato";
+@import "./site/page-cases";
+@import "./site/page-parceiros";
+
+.desktop-only {
+	@media (max-width: 1000px) {
+		display: none;
+	}
+	display: block;
+}
+
+.mobile-only {
+	display: none;
+	@media (max-width: 1000px) {
+		display: block;
+	}
+}
