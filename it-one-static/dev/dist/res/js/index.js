@@ -196,5 +196,7 @@ lists.forEach((list)=>{
     for(let i = 1; i < list.children.length; i++)// Adiciona a classe 'divider' ao <li>
     list.children[i].classList.add("divider-case");
 });
+const deviceRatio = window.devicePixelRatio;
+console.log(deviceRatio);
 
 //# sourceMappingURL=index.js.map

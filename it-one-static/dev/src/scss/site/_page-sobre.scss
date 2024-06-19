@@ -3,6 +3,10 @@
 	.hero {
 		background: var(--biz-blue);
 		height: 772px;
+		@include media(nb) {
+			height: 700px;
+			overflow: hidden;
+		}
 		@include media(s) {
 			height: 100%;
 		}
@@ -41,6 +45,14 @@
 			position: absolute;
 			top: 0;
 			right: -79px;
+			@include media(nb) {
+				max-width: 100%;
+				text-align: right;
+				img {
+					max-width: 75%;
+				}
+			}
+
 			@include media(s) {
 				position: relative;
 				right: unset;
@@ -191,12 +203,10 @@
 			position: absolute;
 			width: 100%;
 			z-index: 2;
-			&::before {
-				content: url("../assets/O.svg");
-				position: absolute;
-				left: 0;
-				top: 0;
+			@include media(nb) {
+				padding: 40px 80px;
 			}
+
 			.d-title {
 				position: relative;
 				padding: 0;
@@ -216,11 +226,17 @@
 		}
 		&_container {
 			height: 1034px;
+			@include media(nb) {
+				height: 840px;
+			}
 			&::before {
 				display: none;
 			}
 			&::after {
 				height: 118px;
+				@include media(nb) {
+					height: 154px;
+				}
 			}
 		}
 		&_content {
@@ -230,6 +246,10 @@
 				padding-top: 80px;
 				padding-bottom: 80px;
 				bottom: 118px;
+				@include media(nb) {
+					bottom: unset;
+					top: 0;
+				}
 			}
 			&.light {
 				.way_card {
@@ -316,6 +336,7 @@
 .video {
 	&_container {
 		display: flex;
+
 		@media (min-width: 1512px) {
 			@include container;
 		}
@@ -332,6 +353,9 @@
 		.column-right {
 			padding: 80px;
 			width: 100%;
+			@include media(nb) {
+				height: 600px;
+			}
 			@include media(s) {
 				padding: 40px 32px;
 			}
@@ -389,6 +413,10 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			@media (max-width: 1366px) {
+				width: 115px;
+				height: 186px;
+			}
 			@include media(s) {
 				display: none;
 			}
@@ -438,6 +466,14 @@
 		&.d-flex {
 			gap: 20px;
 			align-items: center;
+			max-width: 411px;
+			@media (max-width: 1366px) {
+				max-width: 362px;
+				flex-direction: column;
+				text-align: left;
+				align-items: start;
+				gap: 0;
+			}
 			@include media(s) {
 				width: 100%;
 				max-width: 100%;
@@ -458,6 +494,14 @@
 		&:nth-child(2) {
 			background-color: var(--biz-blue);
 			color: var(--tech-blue);
+		}
+		&:nth-child(6) {
+			@media (min-width: 1400px) {
+				max-width: 459px;
+			}
+			@media (max-width: 1366px) {
+				max-width: 508px;
+			}
 		}
 
 		&--info {
@@ -518,6 +562,9 @@
 			font-style: normal;
 			font-weight: 200;
 			line-height: 130%;
+			@include media(nb) {
+				font-size: 24px;
+			}
 			&::after {
 				content: " ";
 				position: absolute;
@@ -545,6 +592,9 @@
 	}
 	.button--container {
 		padding: 0 32px;
+		@include media(nb) {
+			max-width: 390px !important;
+		}
 	}
 	.d-title {
 		color: var(--one-blue);
@@ -581,6 +631,9 @@
 			position: relative;
 			display: flex;
 			align-items: end;
+			@include media(nb) {
+				height: 300px;
+			}
 			.number {
 				@include h4-headline;
 				color: var(--first-white);
@@ -634,6 +687,9 @@
 			height: 360px;
 			background-color: var(--first-white);
 			padding: 24px;
+			@include media(nb) {
+				height: 300px;
+			}
 			display: flex;
 			align-items: center;
 			@include media(s) {

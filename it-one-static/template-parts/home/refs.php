@@ -7,7 +7,7 @@
                 um time de especialistas que atendam às necessidades tecnológicas da sua empresa com total
                 personalização.</h4>
             <div class="button--container">
-                <a href="#" class="button">
+                <a href="#solutions" class="button">
                     <p> NOSSAS SOLUÇÕES</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

@@ -12,7 +12,7 @@
                 certificado pelos principais provedores de tecnologia do mercado.
             </p>
             <div class="button--container ib">
-                <a href="#" class="button white">
+                <a href="/sobre-nos" class="button white">
                     <p>SAIBA MAIS SOBRE NÓS</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

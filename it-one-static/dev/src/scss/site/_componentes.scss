@@ -120,10 +120,16 @@
 	@include f-body;
 	font-weight: 300;
 	line-height: 150%;
+	@include media(nb) {
+		font-size: 1.125rem;
+	}
 }
 .d-title {
 	@include h4-headline;
 	color: var(--first-white);
+	@include media(nb) {
+		font-size: 2.25rem;
+	}
 }
 .d-desc {
 	@include t-body;

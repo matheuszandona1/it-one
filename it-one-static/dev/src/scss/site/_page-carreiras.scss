@@ -36,6 +36,9 @@
 			position: absolute;
 			width: 100%;
 			z-index: 2;
+			@include media(nb) {
+				padding: 40px 80px;
+			}
 			&::before {
 				content: url("../assets/O.svg");
 				position: absolute;
@@ -61,11 +64,17 @@
 		}
 		&_container {
 			height: 1112px;
+			@include media(nb) {
+				height: 1036px;
+			}
 			&::before {
 				display: none;
 			}
 			&::after {
 				height: 127px;
+				@include media(nb) {
+					height: 324px;
+				}
 			}
 		}
 		&_content {
@@ -74,6 +83,10 @@
 				top: unset;
 				bottom: 127px;
 				padding-top: 80px;
+				@include media(nb) {
+					bottom: unset;
+					top: 0;
+				}
 			}
 			&.light {
 				.way_card {

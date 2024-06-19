@@ -59,9 +59,8 @@
 
     </div>
 
-    <div class="button--container ib">
-        <a href="<?php echo esc_url(get_post_type_archive_link('post')); ?>" class="button white"
-            style="background-color:transparent;">
+    <div class="button--container ib text-center">
+        <a href="/conteudo" class="button white " style="background-color:transparent;">
             <p>Ver todos os artigos</p>
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/dev/dist/res/img/assets/navigate_next.svg" alt="">
         </a>

@@ -226,3 +226,7 @@ lists.forEach((list) => {
 		}
 	}
 })
+
+const deviceRatio = window.devicePixelRatio
+
+console.log(deviceRatio)

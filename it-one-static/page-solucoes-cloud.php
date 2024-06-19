@@ -31,14 +31,14 @@ get_header();
                     Conheça nossas soluções de nuvem personalizadas e orientadas para resultados.
                 </p>
                 <div class="button--container ib">
-                    <a href="#" class="button transparent">
+                    <a href="#item" class="button transparent">
                         <p>Conheça as soluções em cloud</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                             alt="">
                     </a>
                 </div>
                 <div class="button--container ib" style=" margin: 20px 0 64px;">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p style="font-size:16px;">Fale com um especialista IT-ONE</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">
@@ -55,7 +55,7 @@ get_header();
         </div>
 
     </section>
-    <section class="item">
+    <section class="item" id="item">
         <div class="item_container">
             <div class="left-column">
                 <h4 class="d-title">Gestão de FinOps</h4>
@@ -164,7 +164,7 @@ get_header();
                 digital.
             </p>
             <div class="button--container ib">
-                <a href="#" class="button tech-blue">
+                <a href="/fale-conosco" class="button tech-blue">
                     <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                         alt="">

@@ -112,7 +112,7 @@ get_header();
                 sucesso. Converse com nossos especialistas e dê o próximo passo:
             </p>
             <div class="button--container ib">
-                <a href="#" class="button biz-blue">
+                <a href="/fale-conosco" class="button biz-blue">
                     <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

@@ -58,6 +58,9 @@
 		display: flex;
 		height: 508px;
 		width: 100%;
+		@include media(nb) {
+			height: 450px;
+		}
 		@include media(s) {
 			flex-direction: column;
 			height: 100%;
@@ -128,6 +131,9 @@
 			width: 100%;
 			flex-shrink: 0;
 			height: 444px;
+			@include media(nb) {
+				height: 386px;
+			}
 			@include media(s) {
 				height: 200px;
 				max-width: 100%;

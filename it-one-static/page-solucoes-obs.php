@@ -28,14 +28,14 @@ get_header();
             <div class="column-right">
 
                 <div class="button--container ib">
-                    <a href="#" class="button transparent">
+                    <a href="#darken" class="button transparent">
                         <p>ENTENDA A SOLUÇÃO</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                             alt="">
                     </a>
                 </div>
                 <div class="button--container ib" style=" margin-top: 20px;">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p style="font-size:16px;">Fale com um especialista IT-ONE</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">
@@ -46,7 +46,7 @@ get_header();
         </div>
 
     </section>
-    <section class="resultados darken">
+    <section class="resultados darken" id="darken">
         <div class="resultados_container">
             <div class="column-left">
                 <p class="d-text">
@@ -75,7 +75,7 @@ get_header();
 
                 </p>
                 <div class="button--container ib" style=" margin-top: 20px;">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p style="font-size:16px;">solicite uma poc</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">
@@ -163,7 +163,7 @@ get_header();
                     <b>Veja a observabilidade em seu ambiente.</b>
                 </p>
                 <div class="button--container " style=" margin-top: 20px;">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p style="font-size:16px;">solicite uma poc</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">
@@ -270,7 +270,7 @@ get_header();
 
                 </div>
                 <div class="button--container ib  desktop-only" style=" margin-top: 20px;">
-                    <a href="#" class="button biz-blue">
+                    <a href="/fale-conosco" class="button biz-blue">
                         <p>Veja a observabilidade em seu ambiente</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                             alt="">
@@ -292,7 +292,7 @@ get_header();
                 }
                 ?>
                 <div class="button--container ib  mobile-only" style=" margin-top: 20px;">
-                    <a href="#" class="button biz-blue">
+                    <a href="/fale-conosco" class="button biz-blue">
                         <p>Veja a observabilidade em seu ambiente</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                             alt="">
@@ -315,7 +315,7 @@ get_header();
                 digital.
             </p>
             <div class="button--container ib">
-                <a href="#" class="button biz-blue">
+                <a href="/fale-conosco" class="button biz-blue">
                     <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

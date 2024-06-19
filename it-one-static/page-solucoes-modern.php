@@ -29,14 +29,14 @@ get_header();
             <div class="column-right">
 
                 <div class="button--container ib">
-                    <a href="#" class="button transparent">
+                    <a href="#white" class="button transparent">
                         <p>Conheça as soluções de Modernização de TI</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                             alt="">
                     </a>
                 </div>
                 <div class="button--container ib" style=" margin-top: 20px;">
-                    <a href="#" class="button biz-blue">
+                    <a href="/fale-conosco" class="button biz-blue">
                         <p style="font-size:16px;">Fale com um especialista IT-ONE</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                             alt="">
@@ -47,7 +47,7 @@ get_header();
         </div>
 
     </section>
-    <section class="item white">
+    <section class="item white" id="white" style="padding-bottom: 0;">
         <div class="item_container">
             <div class="left-column">
                 <h4 class="d-title">Arquitetura híbrida</h4>
@@ -185,7 +185,7 @@ get_header();
                 digital.
             </p>
             <div class="button--container ib">
-                <a href="#" class="button tech-blue">
+                <a href="/fale-conosco" class="button tech-blue">
                     <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                         alt="">

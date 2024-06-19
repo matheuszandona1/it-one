@@ -32,7 +32,7 @@
 .form {
 	gap: 160px;
 	display: flex;
-	align-items: end;
+	align-items: start;
 	@media (min-width: 1512px) {
 		max-width: 1440px;
 		margin: 0 auto;
@@ -180,6 +180,7 @@
 		}
 	}
 	&_client {
+		padding-top: 80px;
 		max-width: 439px;
 		@include media(s) {
 			padding: 0 32px;
@@ -221,15 +222,20 @@
 			background-color: transparent;
 			max-width: 286px;
 			width: 100%;
+			justify-content: end;
 			@include media(s) {
 				flex-shrink: 0;
 			}
 			&.matriz {
+				margin-top: 24px;
 				border: 1px solid var(--first-white);
-				margin-bottom: 24px;
 				padding: 24px;
 				max-width: 346px;
+    
 				width: 100%;
+				.d-text.cidade {
+					margin-top: 24px;
+				}
 			}
 			.d-title {
 				font-size: 32px;

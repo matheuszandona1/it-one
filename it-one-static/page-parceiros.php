@@ -11,18 +11,7 @@ get_header();
             <h1 class="hero__title">
                 Parcerias estratégicas para <b>soluções inovadoras</b>
             </h1>
-            <div class="right-column">
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/PALOALTO.svg" alt="" />
 
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/AWS.svg" alt="" />
-                <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/DELL.svg" alt="" />
-                <img style="max-width:155px"
-                    src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/VMWARE.svg" alt="" />
-
-                <img style="width: 100%;"
-                    src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/ORACLE.svg" alt="" />
-
-            </div>
         </div>
 
         <div class="divider">
@@ -32,71 +21,70 @@ get_header();
         </div>
     </section>
 
-    <section class="resultados">
-        <div class="resultados_container">
-            <div class="column-left">
-                <p class="d-text">
-                    Na busca por excelência e inovação, unimos nossas forças com líderes de mercado para oferecer
-                    soluções tecnológicas sob medida.
-                    <br><br>
-                    Juntos, enfrentamos desafios únicos e impulsionamos o crescimento dos negócios.
-                </p>
-            </div>
-            <div class="column-right">
-                <p class="d-text">
-                    Conheça nossos principais parceiros e como contribuem para o sucesso de nossos clientes.
-                </p>
-                <div class="button--container ib">
-                    <a href="#" class="button one-blue">
-                        <p>fale com a gente</p> <img
-                            src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
-                            alt="">
-                    </a>
-                </div>
-                <div class="button--container ib">
-                    <a href="#" class="button transparent">
-                        <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
-                            src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
-                            alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
 
-    </section>
 
     <section class="parceiros">
         <div class="parceiros_container">
-            <div class="parceiros_card vm">
-                <div class="left-column">
 
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/VMWARE.svg" alt="" />
-                    <div class="parceiros_tag">Parceiro principal</div>
+            <div class="parceiros_content">
+
+                <div class="parceiros_card" style="padding-top: 0;">
                     <p class="d-text">
-                        Desde 2004, a parceria com a VMware promove soluções avançadas de armazenamento na nuvem,
-                        otimizando ambientes de trabalho digitais.
+                        Na busca por excelência e inovação, unimos nossas forças com líderes de mercado para oferecer
+                        soluções tecnológicas sob medida.
+                        <br><br>
+                        Juntos, enfrentamos desafios únicos e impulsionamos o crescimento dos negócios.
+                        <br><br>
+
+                        Conheça nossos principais parceiros e como contribuem para o sucesso de nossos clientes.
                     </p>
-                </div>
-                <div class="right-column">
-                    <p class="d-text">
-                        <b> Competências-chave:</b> 14 Solution Competences, LATAM Preferred Subcontractor.
-                    </p>
-                    <p class="d-text">
+                    <br><br>
 
 
-                        <b>Destaques da Parceria:</b> 2 MSCs, abordagem unificada e otimizada para ambientes de
-                        trabalho.
-                    </p>
-                    <div class="button--container ib">
-                        <a href="#" class="button biz-blue">
+
+                    <div class="button--container ib d-inline-block">
+                        <a href="#" class="button tech-blue">
                             <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
-                                src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
+                                src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                                 alt="">
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="parceiros_content">
+
+                <div class="parceiros_card vm">
+                    <div class="left-column">
+                        <div class="top-info">
+
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/VMWARE.svg"
+                                alt="" />
+                            <div class="parceiros_tag">Parceiro principal</div>
+
+                        </div>
+
+                        <p class="d-text">
+                            Desde 2004, a parceria com a VMware promove soluções avançadas de armazenamento na nuvem,
+                            otimizando ambientes de trabalho digitais.
+                        </p>
+
+                        <p class="d-text">
+                            <b> Competências-chave:</b> 14 Solution Competences, LATAM Preferred Subcontractor.
+                        </p>
+                        <p class="d-text">
+
+
+                            <b>Destaques da Parceria:</b> 2 MSCs, abordagem unificada e otimizada para ambientes de
+                            trabalho.
+                        </p>
+                        <div class="button--container ib d-inline-block">
+                            <a href="/fale-conosco" class="button transparent">
+                                <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                                    src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="parceiros_card">
                     <div class="top-info">
                         <img src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/logo/DELL.svg" alt="">
@@ -115,8 +103,8 @@ get_header();
                         <b>Destaques da Parceria: </b>Uma colaboração duradoura que reforça a inovação e a eficiência.
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA DELL</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -138,8 +126,8 @@ get_header();
                     </p>
                     <p class="d-text"></p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA DYNATRACE</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -164,8 +152,8 @@ get_header();
                         Consultoria em Oracle. Capacidade completa para projetos de ponta a ponta.
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA ORACLE</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -192,8 +180,8 @@ get_header();
                         código aberto.
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA RED-HAT</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -219,8 +207,8 @@ get_header();
 
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA AWS</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -242,8 +230,8 @@ get_header();
                     </p>
 
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA PALOALTO</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -264,8 +252,8 @@ get_header();
                         inovadoras e eficientes.
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA TENABLE</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -286,8 +274,8 @@ get_header();
                         de segurança e networking.
                     </p>
                     <div class="button--container ib">
-                        <a href="#" class="button transparent">
-                            <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
+                        <a href="/fale-conosco" class="button transparent">
+                            <p>FALE COM UM ESPECIALISTA FORTINET</p> <img
                                 src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-blue.svg"
                                 alt="">
                         </a>
@@ -309,7 +297,7 @@ get_header();
                 inovação em sua empresa.
             </p>
             <div class="button--container ib">
-                <a href="#" class="button biz-blue">
+                <a href="/fale-conosco" class="button biz-blue">
                     <p>FALE COM UM ESPECIALISTA IT-ONE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

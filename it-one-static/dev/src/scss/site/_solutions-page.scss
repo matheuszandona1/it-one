@@ -1,10 +1,10 @@
 .page--cloud {
 	background-color: var(--biz-blue);
 	.hero {
-		background: linear-gradient(180deg, rgba(17, 30, 42, 0.7) 0%, rgba(44, 108, 237, 1) 86%, rgba(44, 108, 237, 1) 100%), url("../assets/img-cloud.png");
+		background: url("../assets/img-cloud.jpg");
 		background-repeat: no-repeat;
-		background-position: top;
-		background-size: 100%;
+		background-position: bottom;
+		background-size: 100% 100%;
 		height: auto;
 		padding-bottom: 64px;
 		@include media(s) {
@@ -42,7 +42,7 @@
 			}
 			&-right {
 				.d-text {
-					margin-bottom: 0;
+					margin-bottom: 24px;
 				}
 			}
 		}
@@ -53,6 +53,9 @@
 		background-size: 100%;
 		&_container {
 			height: 1025px;
+			@include media(nb) {
+				height: 900px;
+			}
 			@include media(s) {
 				flex-direction: column;
 				height: 100%;
@@ -63,12 +66,21 @@
 				right: 0;
 				left: -244px;
 				height: 274px;
+				@include media(nb) {
+					left: -179px;
+					height: 211px;
+				}
 			}
 			&::after {
 				background-color: var(--first-white);
 				right: 0;
 				left: -165px;
 				height: 333px;
+				@include media(nb) {
+					left: -110px;
+					height: 237px;
+					bottom: 0;
+				}
 			}
 		}
 		&_content {
@@ -77,6 +89,9 @@
 			top: 0;
 			bottom: unset;
 			max-width: 516px;
+			@include media(nb) {
+				max-width: 540px;
+			}
 			@include media(s) {
 				padding: 32px;
 			}
@@ -86,6 +101,9 @@
 				top: unset;
 				max-width: 720px;
 				padding-bottom: 155px;
+				@include media(nb) {
+					max-width: 684px;
+				}
 				@include media(s) {
 					padding: 32px;
 				}
@@ -225,6 +243,7 @@
 	.item {
 		&.white {
 			background-color: var(--biz-blue-v2);
+			padding: 80px 0;
 			.item_container {
 				@include media(s) {
 					flex-direction: column-reverse;
@@ -284,6 +303,9 @@
 		background-size: 100%;
 		&_container {
 			height: 767px;
+			@include media(nb) {
+				height: 751px;
+			}
 			@include media(s) {
 				height: 100%;
 				flex-direction: column;
@@ -314,6 +336,10 @@
 				top: unset;
 				max-width: 720px;
 				padding-bottom: 155px;
+				@include media(nb) {
+					bottom: -1px;
+					max-width: 717px;
+				}
 				@include media(s) {
 					padding-bottom: 40px;
 				}
@@ -439,9 +465,13 @@
 			@include media(s) {
 				flex-direction: column-reverse;
 			}
+
 			.item_container {
 				.right-column {
 					height: 473px;
+					@include media(nb) {
+						height: auto;
+					}
 					@include media(s) {
 						height: 100%;
 					}
@@ -449,6 +479,9 @@
 				.left-column {
 					padding-top: 80px;
 					background-color: var(--first-white);
+					@media (max-width: 1366px) {
+						padding-left: 80px;
+					}
 					@include media(s) {
 						padding: 40px 32px;
 					}
@@ -492,6 +525,9 @@
 			.left-column {
 				padding-top: 0;
 				background-color: var(--biz-blue-v2);
+				@media (max-width: 1366px) {
+					padding-left: 40px;
+				}
 			}
 			.right-column {
 				height: 535px;
@@ -517,6 +553,9 @@
 		background-size: 100%;
 		&_container {
 			height: 669px;
+			@include media(nb) {
+				height: 653px;
+			}
 			@include media(s) {
 				height: 100%;
 				flex-direction: column-reverse;
@@ -526,6 +565,11 @@
 				right: 0;
 				left: -244px;
 				height: 177px;
+				@include media(nb) {
+					height: 162px;
+					left: -252px;
+					width: 252px !important;
+				}
 				@include media(s) {
 					display: none;
 				}
@@ -535,6 +579,9 @@
 			}
 			&.last {
 				height: 703px;
+				@include media(nb) {
+					height: 675px;
+				}
 				.way_content {
 					@include media(s) {
 						padding-bottom: 40px;
@@ -543,12 +590,17 @@
 				.way_content.blue {
 					height: 527;
 					background-color: var(--one-blue);
+					@include media(nb) {
+						bottom: -1px;
+						height: 514px;
+					}
 				}
 			}
 		}
 		&_content {
 			padding: 80px;
 			padding-bottom: 60px;
+
 			top: 0;
 			bottom: unset;
 			max-width: 478px;
@@ -569,6 +621,9 @@
 				max-width: 720px;
 				padding-bottom: 130px;
 				padding-right: 80px;
+				@include media(nb) {
+					max-width: 683px;
+				}
 				@include media(s) {
 					position: relative;
 					padding: 32px;
@@ -805,7 +860,7 @@
 			font-style: normal;
 			font-weight: 100;
 			line-height: 120%; /* 96px */
-			letter-spacing: -3.6px;
+			letter-spacing: -0.6px;
 			color: var(--first-white);
 			@include media(s) {
 				font-size: 40px;

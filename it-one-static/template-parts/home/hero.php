@@ -13,7 +13,7 @@
                 empresa.
             </p>
             <div class="button--container">
-                <a href="#" class="button">
+                <a href="/fale-conosco" class="button">
                     <p>FALE COM A GENTE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">

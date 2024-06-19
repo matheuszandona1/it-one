@@ -49,7 +49,7 @@ get_header();
                     em tecnologia para solucionar cada novo desafio. 
                 </p>
                 <div class="button--container ib">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p>fale com a gente</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">
@@ -187,7 +187,7 @@ get_header();
                 <?php endif; ?>
             </div>
             <div class="button--container " style="max-width:373px; margin: 0 auto; margin-top: 40px;">
-                <a href="#" class="button biz-blue">
+                <a href="/carreiras" class="button biz-blue">
                     <p>TRABALHE COM A GENTE</p> <img
                         src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg"
                         alt="">
@@ -245,7 +245,7 @@ get_header();
             </div>
         </div>
         <div class="button--container " style="max-width:373px; margin: 0 auto; margin-top: 40px;">
-            <a href="#" class="button biz-blue">
+            <a href="/fale-conosco" class="button biz-blue">
                 <p>FALE COM UM ESPECIALISTA</p> <img
                     src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next.svg" alt="">
             </a>
@@ -284,7 +284,7 @@ get_header();
                     </p>
                 </div>
                 <div class="button--container ib">
-                    <a href="#" class="button tech-blue">
+                    <a href="/fale-conosco" class="button tech-blue">
                         <p>conte com a it-one</p> <img
                             src="<?php echo get_stylesheet_directory_uri() ?>/dev/dist/res/img/assets/navigate_next-dark.svg"
                             alt="">

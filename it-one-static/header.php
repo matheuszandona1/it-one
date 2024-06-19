@@ -15,7 +15,7 @@
 
 <head>
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
 
 
 
@@ -51,12 +51,13 @@
 
 
 
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
-	<header class="header">
+	<header class=" header">
 		<nav class="navbar navbar-expand-lg navbar-light">
 			<a class="navbar-brand" href="/">
 				<img class="desktop-only"

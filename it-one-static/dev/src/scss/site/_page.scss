@@ -65,6 +65,9 @@
 .hero {
 	background: url("../assets/hero.png?as=webp");
 	height: 871px;
+	@include media(nb) {
+		height: 640px;
+	}
 	@include media(s) {
 		background: url("../assets/hero-mobile.jpeg?as=webp");
 		background-size: 600px;
@@ -79,6 +82,10 @@
 		height: 100%;
 		@include container;
 		gap: 132px;
+		@include media(nb) {
+			justify-content: start;
+			gap: 240px;
+		}
 		@include media(s) {
 			flex-direction: column;
 			gap: 32px;
@@ -92,6 +99,9 @@
 		color: var(--first-white);
 		font-size: 130px;
 		line-height: 88%;
+		@include media(nb) {
+			font-size: 6rem;
+		}
 		span {
 			padding-left: 52px;
 		}
@@ -99,6 +109,9 @@
 	&__content {
 		padding-bottom: 98px;
 		max-width: 411px;
+		@include media(nb) {
+			padding-bottom: 0;
+		}
 		@include media(s) {
 			padding-bottom: 0;
 		}
@@ -113,11 +126,14 @@
 	@include media(s) {
 		padding: 0;
 	}
-	padding: 120px 0px;
+	padding: 120 0 80px;
 	&__container {
 		display: flex;
 		@include container;
 		gap: 103px;
+		@include media(nb) {
+			justify-content: space-between;
+		}
 		@include media(s) {
 			flex-direction: column;
 			padding: 0 32px;
@@ -132,9 +148,18 @@
 		display: flex;
 		flex-direction: column;
 		gap: 32px;
+		.button--container {
+			@include media(nb) {
+				display: inline-block;
+				max-width: 300px;
+			}
+		}
 	}
 	&__data {
 		width: 100%;
+		@include media(nb) {
+			max-width: 599px;
+		}
 		@include media(s) {
 			max-width: 100%;
 		}
@@ -150,6 +175,9 @@
 			padding: 24px 40px;
 			color: var(--biz-blue);
 			text-align: center;
+			@include media(nb) {
+				width: 300px;
+			}
 			@include media(s) {
 				width: 100%;
 			}
@@ -170,6 +198,9 @@
 			&-number {
 				@include h2-headline;
 				font-size: 80px;
+				@include media(nb) {
+					font-size: 3.75rem;
+				}
 				@include media(s) {
 					font-size: 77px;
 					text-align: center;
@@ -178,6 +209,9 @@
 			&-text {
 				@include f-subtitle;
 				font-size: 32px;
+				@include media(nb) {
+					font-size: 1.5rem;
+				}
 				@include media(s) {
 					font-size: 24px;
 				}
@@ -186,7 +220,7 @@
 	}
 }
 .solutions {
-	padding: 120px 0px;
+	padding: 80px 0px;
 	@include media(s) {
 		padding-top: 40px;
 	}
@@ -211,6 +245,9 @@
 		font-size: 32px;
 		color: #a4e4ff;
 		margin-bottom: 40px;
+		@include media(nb) {
+			margin-bottom: 24px;
+		}
 		@include media(s) {
 			margin-bottom: 40px;
 			padding-right: 32px;
@@ -228,6 +265,9 @@
 		display: flex;
 		gap: 24px;
 		flex-direction: column;
+		@include media(nb) {
+			height: 624px;
+		}
 		@include media(s) {
 			flex-direction: row;
 			overflow: auto;
@@ -254,6 +294,9 @@
 		border: 1px solid var(--first-white);
 
 		height: 368px;
+		@include media(nb) {
+			height: 300px;
+		}
 		@include media(s) {
 			height: 287px;
 			width: 296px;
@@ -291,12 +334,19 @@
 			bottom: 0;
 			&.bsa {
 				bottom: -70px;
+				@include media(nb) {
+					bottom: -15px !important;
+				}
 			}
 		}
 		&--title {
 			@include f-subtitle;
 			font-size: 32px;
 			margin-bottom: 24px;
+			@include media(nb) {
+				font-size: 24px;
+				margin-bottom: 20px;
+			}
 			@include media(s) {
 				font-size: 24px;
 				line-height: 130%;
@@ -318,7 +368,11 @@
 	}
 	&_container {
 		position: relative;
-		height: 1001px;
+		height: 920px;
+		@include media(nb) {
+			height: 820px;
+		}
+
 		&::after,
 		&::before {
 			content: "";
@@ -327,8 +381,12 @@
 			left: 0;
 			right: 0;
 			margin: 0 auto;
-			height: 276px;
+			height: 313px;
 			background-color: var(--light-blue);
+			@include media(nb) {
+				width: 13% !important;
+				height: 201px;
+			}
 			@media (max-width: 1440px) {
 				width: 17%;
 			}
@@ -336,6 +394,9 @@
 		&::before {
 			height: 301px;
 			right: -2px;
+			@include media(nb) {
+				right: -9px;
+			}
 			background-color: var(--biz-blue);
 			@include media(s) {
 				display: none;
@@ -344,6 +405,11 @@
 		&::after {
 			bottom: 0;
 			left: -2px;
+			@include media(nb) {
+				left: -9px;
+				bottom: -1px;
+				height: 213px;
+			}
 			@include media(s) {
 				display: none;
 			}
@@ -372,6 +438,9 @@
 		position: absolute;
 		bottom: 0;
 		color: var(--first-black);
+		@include media(nb) {
+			bottom: -1px;
+		}
 		@include media(s) {
 			position: unset;
 		}
@@ -385,7 +454,7 @@
 			bottom: unset;
 			top: 0;
 			right: 0;
-			padding-top: 117px;
+			padding-top: 80px;
 			color: var(--first-white);
 			.d-title {
 				color: var(--first-white);
@@ -393,11 +462,16 @@
 		}
 	}
 	&_card {
-		margin-bottom: 80px;
+		margin-bottom: 40px;
 
 		&-top {
 			display: flex;
 			gap: 40px;
+			@include media(nb) {
+				img {
+					max-width: 40px;
+				}
+			}
 			.d-title {
 				font-size: 32px;
 				font-style: normal;
@@ -433,6 +507,9 @@
 	.swiper-container {
 		width: 100%;
 		height: 680px;
+		@include media(nb) {
+			height: 580px;
+		}
 		@include media(s) {
 			height: 100%;
 			width: calc(100% - 32px);
@@ -476,6 +553,9 @@
 		.swiper-wrapper {
 			align-items: center;
 			height: 680px !important;
+			@include media(nb) {
+				height: 580px !important;
+			}
 			@include media(s) {
 				height: 180px !important;
 			}
@@ -501,6 +581,9 @@
 			height: 680px;
 			box-shadow: 0px 0px 142.2px 1px #a4e9ff;
 			opacity: 1;
+			@include media(nb) {
+				height: 580px;
+			}
 			@include media(s) {
 				height: 180px;
 				width: 180px;
@@ -546,7 +629,7 @@
 		@include container;
 		display: flex;
 		gap: 132px;
-		padding: 120px 0px;
+		padding: 120px 0px 80px;
 		@include media(s) {
 			flex-direction: column;
 			padding: 40px 32px;
@@ -578,7 +661,7 @@
 }
 
 .news {
-	padding: 120px 0;
+	padding: 80px 0;
 	background-color: var(--first-white);
 	@include media(s) {
 		padding-top: 32px;
